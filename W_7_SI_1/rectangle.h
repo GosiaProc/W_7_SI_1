@@ -7,14 +7,13 @@ class Rectangle :
 	int a;
 	int b;
 	std::string name = "rectangle";
-	double area = a * b;
-	double perimeter;
-	double calculateArea()=0;
-	double calculatePerimeter() = 0;
-	std::string perimeterFormula;
-	std::string AreaFormula;
+	
+double calculateArea();
+	double calculatePerimeter();
+	std::string perimeterFormula= "Perimeter=2a+2b";
+	std::string AreaFormula="Area=a*b";
 public:
-	virtual void toString() = 0;
+	void toString();
 
 };
 

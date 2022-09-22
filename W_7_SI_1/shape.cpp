@@ -1,21 +1,11 @@
 #include "Shape.h"
 
-double Shape::getPerimeter()
+std::string Shape::getPerimeterFormula()
 {
-    return perimeter;
+	return perimeterFormula;
 }
 
-double Shape::getArea()
+std::string Shape::getAreaFormula()
 {
-    return area;
-}
-
-void Shape::getPerimeterFormula()
-{
-    std::cout << perimeterFormula;
-}
-
-void Shape::getAreaFormula()
-{
-    std::cout << AreaFormula;
+	return areaFormula;
 }

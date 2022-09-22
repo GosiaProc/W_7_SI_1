@@ -1,18 +1,20 @@
 #pragma once
 #include "shape.h"
-class Circle :
+class Triangle :
     public Shape
 {
-	int r;
-	std::string name = "circle";
-   
+	int a;
+	int b;
+	int c;
+	int h;
+	std::string name = "triangle";
+
 	double calculateArea();
 	double calculatePerimeter();
 	
 public:
-	Circle() : Shape("Perimeter=2*3.14*R", "Area=3.14*R^2") {};
+	Triangle() :Shape("Perimeter=a+b+c", "Area=a*h/2") {};
 	void toString();
 
 };
 
- 

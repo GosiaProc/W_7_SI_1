@@ -3,6 +3,7 @@
 
 class Rectangle :
     public Shape
+
 {
 	int a;
 	int b;
@@ -10,9 +11,10 @@ class Rectangle :
 	
 double calculateArea();
 	double calculatePerimeter();
-	std::string perimeterFormula= "Perimeter=2a+2b";
-	std::string AreaFormula="Area=a*b";
+
+	
 public:
+	Rectangle() :Shape("Perimeter=2a+2b", "Area=a*b"){};
 	void toString();
 
 };

@@ -20,5 +20,6 @@ void Circle::toString()
 	area = calculateArea();
 
 	std::cout << perimeterFormula << "=" << perimeter << std::endl;
-	std::cout << AreaFormula << "=" << area << std::endl;
+	std::cout << areaFormula << "=" << area << std::endl;
 }
+

@@ -19,10 +19,10 @@ void Rectangle::toString()
 	std::cout << "b=";
 	std::cin >> a;
 	std::cout << std::endl;
-	perimeter = calculatePerimeter();
-	area = calculateArea();
+	//perimeter = calculatePerimeter();
+	//area = calculateArea();
 
-	std::cout << perimeterFormula << "=" << perimeter << std::endl;
-	std::cout << AreaFormula << "=" << area << std::endl;
+	//std::cout << perimeterFormula << "=" << perimeter << std::endl;
+	//std::cout << areaFormula << "=" << area << std::endl;
 
 }

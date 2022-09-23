@@ -4,10 +4,10 @@
 
 class ShapeCollection
 {
-	std::vector<Shape*>shapes = {};
+	std::vector<Shape*>shapes;
 public:
 	
-	void addShape(Shape *sh);
+	void addShape();
 	void getShapesTable();
 	void getLargestShapeByPerimeter();
 	void getLargestShapeByArea();

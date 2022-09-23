@@ -3,17 +3,34 @@
 #include "rectangle.h"
 #include "Triangle.h"
 
-void ShapeCollection::addShape(Shape *sh)
+void ShapeCollection::addShape()
 {
     
 
     std::cout << "1.Add Rectangle\n2.Add Circle\n3.Add Trangle\nChoice: ";
     int choice;
+    std::string name;
+    int a;
+    int b;
+
     std::cin >> choice;
 
     if (choice == 1) {
-       Shape* sh = new Rectangle;
+        std::cout << "PODAJ NAZWe";
+        std::cout << name;
+        std::cout << "PODAJ BOK a";
+        std::cin >> a;
+        std::cout << "a="<<a;
+        std::cout << std::endl;
+        std::cout << "PODAJ BOK b";
+        std::cin >> b;
+        std::cout << "b="<<b;
+        std::cout << std::endl;
+        Shape* sh = new Rectangle(name, a, b);
+        sh->toString();
+         
        shapes.push_back(sh);
+       std::cout << "Added new rectangle\n";
 
     }
     else if (choice == 2) {

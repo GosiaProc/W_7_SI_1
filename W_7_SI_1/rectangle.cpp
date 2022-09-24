@@ -12,10 +12,12 @@ double Rectangle::calculatePerimeter()
 
 void Rectangle::toString()
 {
+	std::cout << std::endl << "This is a rectangle with name: '";
 	std::cout << name;
-	std::cout << "a="<<a;
+	std::cout << "' " << std::endl;
+	std::cout << "a= " << a;
 	std::cout << std::endl;
-	std::cout << "b="<<b;
+	std::cout << "b= " << b;
 	std::cout << std::endl;
 	perimeter = calculatePerimeter();
 	area = calculateArea();
@@ -25,8 +27,8 @@ void Rectangle::toString()
 
 }
 
-Rectangle::Rectangle(std::string rectangleName, int Rectanglea, int Rectangleb):Shape("Perimeter=2a+2b", "Area=a*b") {
-	name = rectangleName;
-	a = Rectanglea;
-	b = Rectangleb;
+Rectangle::Rectangle(std::string name, double a, double b):Shape("Perimeter=2a+2b", "Area=a*b") {
+	this->name = name;
+	this->a = a;
+	this->b = b;
 }

@@ -5,40 +5,46 @@
 
 void ShapeCollection::addShape()
 {
-    
-
-    std::cout << "1.Add Rectangle\n2.Add Circle\n3.Add Trangle\nChoice: ";
+    std::cout << std::endl<< "1.Add Rectangle\n2.Add Circle\n3.Add Trangle\nChoice: ";
     int choice;
     std::string name;
-    int a;
-    int b;
+    double a, b, c, h, r;
 
     std::cin >> choice;
 
     if (choice == 1) {
-        std::cout << "PODAJ NAZWe";
-        std::cout << name;
-        std::cout << "PODAJ BOK a";
+        std::cout << "Enter name " << std::endl;
+        std::cin >> name;
+        std::cout << "Enter a" << std::endl;
         std::cin >> a;
-        std::cout << "a="<<a;
-        std::cout << std::endl;
-        std::cout << "PODAJ BOK b";
+        std::cout << "Enter b" << std::endl;
         std::cin >> b;
-        std::cout << "b="<<b;
-        std::cout << std::endl;
         Shape* sh = new Rectangle(name, a, b);
         sh->toString();
-         
-       shapes.push_back(sh);
-       std::cout << "Added new rectangle\n";
-
+        shapes.push_back(sh);
     }
     else if (choice == 2) {
-       Shape* sh = new Circle;
+        std::cout << "Enter name " << std::endl;
+        std::cin >> name;
+        std::cout << "Enter r" << std::endl;
+        std::cin >> r;
+        Shape* sh = new Circle(name, r);
+        sh->toString();
        shapes.push_back(sh);
     }
     else if (choice == 3){
-       Shape* sh = new Triangle;
+        std::cout << "Enter name ";
+        std::cin >> name;
+        std::cout << "Enter a" << std::endl;
+        std::cin >> a;
+        std::cout << "Enter b" << std::endl;
+        std::cin >> b;
+        std::cout << "Enter c" << std::endl;
+        std::cin >> c;
+        std::cout << "Enter h" << std::endl;
+        std::cin >> h;
+       Shape* sh = new Triangle(a,b,c,h);
+       sh->toString();
        shapes.push_back(sh);
     }
     else
@@ -47,7 +53,7 @@ void ShapeCollection::addShape()
 
 void ShapeCollection::getShapesTable()
 {
-    std::cout << "Your shapes:\n";
+    std::cout << std::endl << "Your shapes:\n";
     for (Shape* sh : shapes)
     {
         sh->toString();
@@ -56,19 +62,26 @@ void ShapeCollection::getShapesTable()
 
 void ShapeCollection::getLargestShapeByPerimeter()
 {
+    Shape* max = shapeWithMaxPerimeter();
+    std::cout << "Shape with max perimeter is :";
+    max->toString();
 }
 
 void ShapeCollection::getLargestShapeByArea()
 {
+    Shape* max = shapeWithMaxArea();
+    std::cout << "Shape with max area is :";
+    max->toString();
 }
 
 void ShapeCollection::getFormulas()
 {
     int choice2;
    
-    std::cout << "What formula for which shape you want to see?\n";
+    std::cout << std::endl<< "What formula for which shape you want to see?\n";
     std::cout << "1.Rectangle\n2.Circle\n3.Trangle\nChoice: ";
     std::cin >> choice2;
+    std::cout << "\n";
 
     if (choice2 == 1) {
        Rectangle* rectangle= new Rectangle();

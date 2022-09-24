@@ -7,12 +7,11 @@
 
 
 int main() {
-
+    ShapeCollection myCollection;
 	while (true) {
         int choice;
-		std::cout << "1.Add new shape\n2.Show All shapes\n3.Show shape with the largest pprimeter\n4.Show shape with the largest area\n5.Exit.\n6.Formulas\nChoice:";
+		std::cout <<std::endl<< "1.Add new shape\n2.Show All shapes\n3.Show shape with the largest pprimeter\n4.Show shape with the largest area\n5.Exit.\n6.Formulas\nChoice:";
 		std::cin >> choice;
-        ShapeCollection myCollection;
 
         if (choice == 1) {
             myCollection.addShape();
@@ -20,11 +19,9 @@ int main() {
         else if (choice == 2)
             myCollection.getShapesTable();
         else if (choice == 3)
-            std::cout << "abc";
-            //myCollection.getLargestShapeByPerimeter();
+            myCollection.getLargestShapeByPerimeter();
         else if (choice == 4)
-            std::cout << "abc";
-            //myCollection.getLargestShapeByArea();
+            myCollection.getLargestShapeByArea();
         else if (choice == 5)
             break;
         else if (choice == 6)

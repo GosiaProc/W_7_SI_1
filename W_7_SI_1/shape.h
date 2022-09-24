@@ -6,11 +6,11 @@
 		std::string name;
 		double area;
 		double perimeter;
-		virtual double calculateArea() = 0;
-		virtual double calculatePerimeter() = 0;
 		std::string perimeterFormula;
 		std::string areaFormula;
 	public:
+		virtual double calculateArea() = 0;
+		virtual double calculatePerimeter() = 0;
 		Shape(std::string perimeterFormula,
 			std::string areaFormula) {
 			this->perimeterFormula = perimeterFormula;
